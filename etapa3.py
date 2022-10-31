@@ -1,3 +1,5 @@
+from collections import Counter
+
 def senha():
     senha = str(input("Insira a senha: "))
     senhaSeparada = list(senha)
