@@ -1,3 +1,5 @@
+from collections import Counter
+
 def etapa1(id):
     if id.isnumeric():
         idListado = sorted(list(id))
@@ -6,9 +8,9 @@ def etapa1(id):
             index1 = int(idListado[1]+idListado[2])
             
             if (index0 + index1) <= 100:
-                return print("Id é valido")
+                return print("Id é válido")
             
-    print("Id é invalido")
+    print("Id é inválido")
 
 
 def etapa2(arr):
@@ -25,7 +27,7 @@ def etapa2(arr):
             if (x + 1) not in arrAscend:
                 result.append(x+1)
                 
-    return result
+    return print(result)
 
 
 def etapa3(senha):
@@ -39,12 +41,6 @@ def etapa3(senha):
 
 
 if __name__ == "__main__":
-    if etapa1('1234') > 100:
-        print('ID inválido')
-        exit(1)
-    if len(etapa2([1, 1])) > 0:
-        print('Voto inválido')
-        exit(1)
-    if not etapa3('abba'):
-        print('Senha inválida')
-        exit(1)
+    etapa1("1234")
+    etapa2([1,1])
+    etapa3('abab')
