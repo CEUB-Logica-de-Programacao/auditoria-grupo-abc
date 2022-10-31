@@ -7,9 +7,9 @@ def etapa1(id):
         index1 = int(idListado[1]+idListado[2])
 
         if (index0 + index1) <= 100:
-            return print("Id é válido")
+            return True
             
-    print("Id é inválido")
+    return False
 
 
 def etapa2(arr):
@@ -26,7 +26,7 @@ def etapa2(arr):
             if (x + 1) not in arrAscend:
                 result.append(x+1)
                 
-    return print(result)
+    return result
 
 
 def etapa3(senha):
@@ -34,12 +34,16 @@ def etapa3(senha):
     chars = list(Counter(senhaSeparada).values())
     
     if all(element == chars[0] for element in chars):
-        return print("Senha é válida")
+        return True
     else:
-        return print("Senha é inválida") 
+        return False
 
-
-if __name__ == "__main__":
-    etapa1("1234")
-    etapa2([1,1])
-    etapa3('abab')
+if etapa1('1234') > 100:
+        print('ID inválido')
+        exit(1)
+    if len(etapa2([1, 1])) > 0:
+        print('Voto inválido')
+        exit(1)
+    if not etapa3('abba'):
+        print('Senha inválida')
+        exit(1)
