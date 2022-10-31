@@ -4,7 +4,7 @@ def etapa1(id):
     idListado = sorted(list(str(id)))
     soma = 101
     
-    if not id.isnumeric() or int(id) < 1:
+    if int(id) < 1:
         return soma
         
     if len(idListado) > 0 and len(idListado) < 4:
@@ -46,7 +46,7 @@ def etapa3(senha):
         return False
 
 if __name__ == "__main__":
-    if etapa1('1') > 100:
+    if etapa1(1230) > 100:
             print('ID inválido')
             exit(1)
     if len(etapa2([1, 2,3,4,5,6,7,8,9])) > 0:
