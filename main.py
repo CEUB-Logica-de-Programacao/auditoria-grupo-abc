@@ -3,11 +3,19 @@ from collections import Counter
 def etapa1(id):
     idListado = sorted(list(str(id)))
     soma = 101
+    
+    if not id.isnumeric() or int(id) < 1:
+        return soma
+        
+    if len(idListado) > 0 and len(idListado) < 4:
+        for x in range(0, 4-len(idListado) ):
+            idListado.insert(0, "0")
+            
     if len(idListado) == 4:
         index0 = int(idListado[0]+idListado[3])
         index1 = int(idListado[1]+idListado[2])
         soma = index0 + index1
-            
+        
     return soma
 
 
@@ -38,7 +46,7 @@ def etapa3(senha):
         return False
 
 if __name__ == "__main__":
-    if etapa1('7878') > 100:
+    if etapa1('1') > 100:
             print('ID inválido')
             exit(1)
     if len(etapa2([1, 2,3,4,5,6,7,8,9])) > 0:
