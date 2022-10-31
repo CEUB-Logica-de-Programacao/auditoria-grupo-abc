@@ -1,7 +1,7 @@
 from collections import Counter
 
 def etapa1(id):
-    idListado = sorted(list(id))
+    idListado = sorted(list(str(id)))
     soma = 101
     if len(idListado) == 4:
         index0 = int(idListado[0]+idListado[3])
