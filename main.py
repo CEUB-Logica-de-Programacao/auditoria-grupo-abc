@@ -38,9 +38,10 @@ def etapa3(senha):
     else:
         return False
 
-if etapa1('1234') > 100:
-        print('ID inválido')
-        exit(1)
+if __name__ == "__main__":
+    if etapa1('1234') > 100:
+            print('ID inválido')
+            exit(1)
     if len(etapa2([1, 1])) > 0:
         print('Voto inválido')
         exit(1)
